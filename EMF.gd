@@ -20,11 +20,10 @@ class Round:
 		
 	
 	static func _TM_Int(_A,_B):
-		var R
 		var S = sign(_A)
 		_A = absi(_A)
 		_B = absi(_B)
-		R = _A % _B
+		var R = _A % _B
 		if (R != 0):
 			if (R >= (_B / 2)):
 				_A = _A + (_B - R)
@@ -35,11 +34,10 @@ class Round:
 		return(_A)
 	
 	static func _TM_Float(_A,_B):
-		var R
 		var S = sign(_A)
 		_A = abs(_A)
 		_B = abs(_B)
-		R = fmod(_A, _B)
+		var R = fmod(_A, _B)
 		if (R != 0):
 			if (R >= (_B / 2)):
 				_A = _A + (_B - R)
